@@ -3886,11 +3886,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ersen\\Desktop\\PiDataEmlak\\Emlak.Api\\Emlak.Api\\Emlak.Api.csproj",
+      "projectUniqueName": "C:\\Users\\Ersen\\Desktop\\PiDataEmlak\\Emlak Projesi\\Emlak.Api\\Emlak.Api\\Emlak.Api.csproj",
       "projectName": "Emlak.Api",
-      "projectPath": "C:\\Users\\Ersen\\Desktop\\PiDataEmlak\\Emlak.Api\\Emlak.Api\\Emlak.Api.csproj",
+      "projectPath": "C:\\Users\\Ersen\\Desktop\\PiDataEmlak\\Emlak Projesi\\Emlak.Api\\Emlak.Api\\Emlak.Api.csproj",
       "packagesPath": "C:\\Users\\Ersen\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ersen\\Desktop\\PiDataEmlak\\Emlak.Api\\Emlak.Api\\obj\\",
+      "outputPath": "C:\\Users\\Ersen\\Desktop\\PiDataEmlak\\Emlak Projesi\\Emlak.Api\\Emlak.Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Ersen\\AppData\\Roaming\\NuGet\\NuGet.Config",

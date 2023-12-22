@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4kpPEKXZbNK+3/tSiBbvjSxxP9B49uYnvyOh74uFWZk48K4rFxzMMxArqMVCZkCyGqZN2B2sCO6YLJbpxDpuJw==",
+  "dgSpecHash": "HKoZ4YDsOyIl8mkV0EX/Vxbiw/rIbO0RZt/PeeiJfgKTww7O6oU7SBZ0R5KsBnrYf8OFviytwJsM9MrJGfh8Qw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Ersen\\Desktop\\PiDataEmlak\\Emlak.Api\\Emlak.Api\\Emlak.Api.csproj",
+  "projectFilePath": "C:\\Users\\Ersen\\Desktop\\PiDataEmlak\\Emlak Projesi\\Emlak.Api\\Emlak.Api\\Emlak.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ersen\\.nuget\\packages\\automapper\\8.0.0\\automapper.8.0.0.nupkg.sha512",
     "C:\\Users\\Ersen\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\6.0.0\\automapper.extensions.microsoft.dependencyinjection.6.0.0.nupkg.sha512",
