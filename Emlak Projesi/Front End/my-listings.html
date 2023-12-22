@@ -1,0 +1,470 @@
+﻿<!DOCTYPE html>
+<html lang="zxx">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="description" content="html 5 template">
+        <meta name="author" content="">
+        <title>Find Houses - HTML5 Template</title>
+        <!-- FAVICON -->
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+        <link rel="stylesheet" href="css/jquery-ui.css">
+        <!-- GOOGLE FONTS -->
+        <link href="../../css?family=Lato:300,300i,400,400i%7CMontserrat:600,800" rel="stylesheet">
+        <!-- FONT AWESOME -->
+        <link rel="stylesheet" href="css/fontawesome-all.min.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <!-- ARCHIVES CSS -->
+        <link rel="stylesheet" href="css/search.css">
+        <link rel="stylesheet" href="css/dashbord-mobile-menu.css">
+        <link rel="stylesheet" href="css/animate.css">
+        <link rel="stylesheet" href="css/swiper.min.css">
+        <link rel="stylesheet" href="css/magnific-popup.css">
+        <link rel="stylesheet" href="css/lightcase.css">
+        <link rel="stylesheet" href="css/owl-carousel.css">
+        <link rel="stylesheet" href="css/owl.carousel.min.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/menu.css">
+        <link rel="stylesheet" href="css/slick.css">
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" id="color" href="css/default.css">
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    </head>
+    <body class="maxw1600 m0a dashboard-bd">
+        <!-- Wrapper -->
+        <div id="wrapper" class="int_main_wraapper">
+            <!-- START SECTION HEADINGS -->
+            <!-- Header Container
+        <!-- Header Container / End -->
+            <!-- START SECTION USER PROFILE -->
+            <section class="user-page section-padding pt-5">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-12 col-xs-12 pl-0 pr-0 user-dash">
+                            <div class="user-profile-box mb-0">
+                                <div class="sidebar-header">
+                                    <img src="images/logo.svg" alt="header-logo2.png">
+                                </div>
+                                <div class="detail clearfix">
+                                    <ul class="mb-0">
+                                        <li>
+                                            <a href="dashboard.html">
+                                                <i class="fa fa-map-marker"></i>Panel
+                                                
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="addrealestate.html">
+                                                <i class="fa fa-list"></i>İlan Ekle
+                                              
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="active" href="my-listings.html">
+                                                <i class="fa fa-list" aria-hidden="true"></i>İlanlarım
+                                             
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-9 col-md-12 col-xs-12 pl-0 user-dash2">
+                            <div class="col-lg-12 mobile-dashbord dashbord">
+                                <div class="dashboard_navigationbar dashxl">
+                                    <div class="dropdown">
+                                        <button onclick="myFunction()" class="dropbtn">
+                                            <i class="fa fa-bars pr10 mr-2"></i>
+                                            Dashboard Navigation
+                                        </button>
+                                        <ul id="myDropdown" class="dropdown-content">
+                                            <li>
+                                                <a href="dashboard.html">
+                                                    <i class="fa fa-map-marker mr-3"></i>
+                                                    Panel
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="addrealestate.html">
+                                                    <i class="fa fa-user mr-3"></i>
+                                                    İlan Ver
+                                                </a>
+                                            </li>
+                                            <li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="my-properties">
+                                    <table class="table-responsive">
+                                        <thead>
+                                            <tr>
+                                                <th class="pl-12">
+                                                    İlanlarım
+                                                </mth>
+                                                <th>Başlık</th>
+                                                <th>Açıklama</th>
+                                                <th>Oda Sayısı</th>
+                                                <th class="p-2">Kaçıncı Kat</th>
+                                                <th>Renk</th>
+                                                <th>Fiyat</th>
+                                                <th>Durum</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="propertyList">
+                                            <script>
+                                    $(document).ready(function () {
+                                        $.ajax({
+                                        url: 'https://localhost:7233/api/RealEstate/',
+                                        method: 'GET',
+                                        success: function(data) {
+                                            // Verileri alındıktan sonra, her bir özellik için döngü oluştur
+                                            $.each(data, function(index, property) {
+                                                // Her bir özellik için HTML içeriği oluştur
+                            
+                                                var imageUrl = `https://localhost:7233/img/${property.realEstateImageUrl}`;
+                                                var propertyHtml = `
+                                    <tr>
+                                        <td class="image myelist">
+                                                <img alt="image" src="${imageUrl}" class="img-fluid">
+                                        </td>
+                                        <td>
+                                            <div class="inner">
+                                                <a><h2>${property.title}</h2></a>
+                                               
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="inner">
+                                                <a><h2>${property.desciption}</h2></a>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="inner">
+                                                <a ><h2>${property.rooms}</h2></a>
+                                        
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="inner">
+                                                <a ><h2>&nbsp ${property.floor}</h2></a>
+                                           
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="inner">
+                                                <a ><h2>${property.color}</h2></a>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="inner">
+                                                <a><h2>${property.price}₺</h2></a>
+                                            </div>
+                                        </td>
+
+
+                                        <td class="actions">
+                                            <a onclick="updateEstate('${property.id}')" href="javascript:;" class="edit"><i class="lni-pencil"></i>Güncelle</a>
+                                            <a onclick="deleteEstate('${property.id}')" id="${property.id}" href="javascript:;"><i class="far fa-trash-alt"></i></a>
+                                        </td>
+                                    </tr>
+                                    `;
+
+                                    // Oluşturulan HTML içeriğini sayfaya ekleyelim
+                                    $('#propertyList').append(propertyHtml);
+                                    });
+                                    },
+                                    error: function(error) {
+                                    console.error('Error:', error);
+                                    }
+                                    });
+                                    });
+                                            </script>
+                                        </tbody>
+                                    </table>
+                                    <script>
+                                function deleteEstate(id)
+                                {
+                                $.ajax({
+                            url: "https://localhost:7233/api/RealEstate/"+id,
+                            type: "DELETE",
+                            contentType: "application/json",
+                            data: JSON.stringify({ id:id }),
+                            success: function(data) {
+                                alert("İlan başarıyla silindi");
+                                location.reload();
+                            },
+                            error: function(error) {
+                                alert("Delete Error: " + JSON.stringify(error));
+                            }
+                                 });
+
+                                }
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div
+                    class="modal hide"
+                    id="updateModal"
+                    tabindex="-1"
+                    role="dialog"
+                >
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">İlanı Düzenle</h5>
+                                <button
+                                    type="button"
+                                    class="close"
+                                    data-dismiss="modal"
+                                    aria-label="Close"
+                                >
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form id="updateForm" enctype="multipart/form-data">
+                                    <input type="hidden" name="_method" value="PUT">
+                                    <div class="row">
+                                        <input type="hidden" id="estateID" name="estateID">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>İlan Başlığı</label>
+                                                <input
+                                                    type="text"
+                                                    class="form-control"
+                                                    name="estateName"
+                                                    id="estateName"
+                                                >
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>İlan Açıklaması</label>
+                                                <input
+                                                    type="text"
+                                                    class="form-control"
+                                                    name="estateDescription"
+                                                    id="estateDescription"
+                                                >
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>İlan Fiyatı</label>
+                                                <input
+                                                    type="text"
+                                                    class="form-control"
+                                                    name="estatePrice"
+                                                    id="estatePrice"
+                                                >
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label for="type">Emlak Durumu</label>
+                                                <select class="form-control" id="type" name="type">
+                                                    <option value="Kiralık">Kiralık</option>
+                                                    <option value="Satılık">Satılık</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label for="floor">Kat Sayısı</label>
+                                                <select
+                                                    class="form-control"
+                                                    aria-placeholder="Kat Sayısı"
+                                                    name="floor"
+                                                    id="floor"
+                                                >
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                    <option>4</option>
+                                                    <option>5</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label for="rooms">Oda Sayısı</label>
+                                                <select name="rooms" class="form-control" id="rooms">
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label for="color">Renk Seçiniz</label>
+                                                <select
+                                                    name="color"
+                                                    name="color"
+                                                    class="form-control"
+                                                    id="color"
+                                                >
+                                                    <option value="1">Beyaz</option>
+                                                    <option value="2">Siyah</option>
+                                                    <option value="3">Pembe</option>
+                                                    <option value="4">Mavi</option>
+                                                    <option value="5">Yeşil</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label for="exampleFormControlFile1">Resim Yükle</label>
+                                                <div class="custom-file">
+                                                    <input
+                                                        type="file"
+                                                        class="custom-file-input"
+                                                        name="RealEstateImageUrl"
+                                                        id="RealEstateImageUrl"
+                                                    >
+                                                    <label class="custom-file-label" for="RealEstateImageUrl">Resim  Seç</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <button type="submit" class="btn btn-success" id="submitBtn">Kaydet</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+<script>
+
+function updateEstate(id) {
+    $('#updateModal').modal('toggle');
+
+    $.ajax({
+        url: 'https://localhost:7233/api/RealEstate/'+id,
+        method: 'GET',
+        success: function (data) {
+            $("#estateName").val(data.title);
+            $("#estateDescription").val(data.desciption);
+            $("#estatePrice").val(data.price);
+            $("#color").val(data.color);
+            $("#rooms").val(data.rooms);
+            $("#floor").val(data.floor);
+            $("#type").val(data.type);
+            $("#estateID").val(data.id);
+           
+        }
+    });
+}
+
+
+$("#submitBtn").on("click", () => {
+    var id = $('#estateID').val();
+    var formData = new FormData();
+    formData.append('id', id);
+    formData.append('RealEstateImageUrl', $("#RealEstateImageUrl")[0].files[0]);
+    formData.append('color', $("#color").val());
+    formData.append('type', $("#type").val());
+    formData.append('rooms', $("#rooms").val());
+    formData.append('floor', $("#floor").val());
+    formData.append('title', $("#estateName").val());
+    formData.append('desciption', $("#estateDescription").val());
+    formData.append('price', $("#estatePrice").val());
+
+    var button = $("#submitBtn");
+
+    button.button("loading");
+    $.ajax({
+        url: "https://localhost:7233/api/RealEstate/" + id,
+        type: "PUT",
+        contentType: false,
+        processData: false,
+        data: formData,
+        success: function (data) {
+            window.alert("İlan başarıyla Güncellendi");
+            location.reload();
+            button.button("reset");
+        },
+        error: function (error) {
+            alert("Update Error: " + JSON.stringify(error));
+            button.button("reset");
+        }
+    });
+});
+</script>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END SECTION USER PROFILE -->
+            <!-- START FOOTER -->
+            <footer class="first-footer">
+                <div class="second-footer">
+                  
+                </div>
+            </footer>
+            <a data-scroll="" href="#wrapper" class="go-up">
+                <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+            </a>
+            <!-- END FOOTER -->
+            <!-- START PRELOADER -->
+            <div id="preloader">
+                <div id="status">
+                    <div class="status-mes"></div>
+                </div>
+            </div>
+            <!-- END PRELOADER -->
+            <!-- ARCHIVES JS -->
+            <script src="js/jquery-3.5.1.min.js"></script>
+            <script src="js/jquery-ui.js"></script>
+            <script src="js/tether.min.js"></script>
+            <script src="js/moment.js"></script>
+            <script src="js/bootstrap.min.js"></script>
+            <script src="js/mmenu.min.js"></script>
+            <script src="js/mmenu.js"></script>
+            <script src="js/swiper.min.js"></script>
+            <script src="js/swiper.js"></script>
+            <script src="js/slick.min.js"></script>
+            <script src="js/slick2.js"></script>
+            <script src="js/fitvids.js"></script>
+            <script src="js/jquery.waypoints.min.js"></script>
+            <script src="js/jquery.counterup.min.js"></script>
+            <script src="js/imagesloaded.pkgd.min.js"></script>
+            <script src="js/isotope.pkgd.min.js"></script>
+            <script src="js/smooth-scroll.min.js"></script>
+            <script src="js/lightcase.js"></script>
+            <script src="js/search.js"></script>
+            <script src="js/owl.carousel.js"></script>
+            <script src="js/jquery.magnific-popup.min.js"></script>
+            <script src="js/ajaxchimp.min.js"></script>
+            <script src="js/newsletter.js"></script>
+            <script src="js/jquery.form.js"></script>
+            <script src="js/jquery.validate.min.js"></script>
+            <script src="js/searched.js"></script>
+            <script src="js/dashbord-mobile-menu.js"></script>
+            <script src="js/forms-2.js"></script>
+            <script src="js/color-switcher.js"></script>
+            <!-- MAIN JS -->
+            <script src="js/script.js"></script>
+            <script src="js/ajax/estate.js"></script>
+            <script>
+            $(".header-user-name").on("click", function() {
+                $(".header-user-menu ul").toggleClass("hu-menu-vis");
+                $(this).toggleClass("hu-menu-visdec");
+            });
+            </script>
+        </div>
+        <!-- Wrapper / End -->
+    </body>
+</html>

@@ -1,0 +1,57 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Ersen\\Desktop\\PiDataEmlak\\Emlak.Api\\Emlak.Api\\wwwroot\\img\\29ec899e-b745-497c-b304-39a7eca4fb09.jpg",
+      "PackagePath": "staticwebassets\\img\\29ec899e-b745-497c-b304-39a7eca4fb09.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ersen\\Desktop\\PiDataEmlak\\Emlak.Api\\Emlak.Api\\wwwroot\\img\\2de13b26-22e5-4a58-88bd-93eafe7e219b.jpg",
+      "PackagePath": "staticwebassets\\img\\2de13b26-22e5-4a58-88bd-93eafe7e219b.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ersen\\Desktop\\PiDataEmlak\\Emlak.Api\\Emlak.Api\\wwwroot\\img\\34654a24-1f53-4cea-a54e-368d415ff305.jpg",
+      "PackagePath": "staticwebassets\\img\\34654a24-1f53-4cea-a54e-368d415ff305.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ersen\\Desktop\\PiDataEmlak\\Emlak.Api\\Emlak.Api\\wwwroot\\img\\34c92adb-4d64-4232-9656-290f1d168ea3.jpg",
+      "PackagePath": "staticwebassets\\img\\34c92adb-4d64-4232-9656-290f1d168ea3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ersen\\Desktop\\PiDataEmlak\\Emlak.Api\\Emlak.Api\\wwwroot\\img\\39ce59a8-bf1b-43fa-91ec-a90250b1139b.jpg",
+      "PackagePath": "staticwebassets\\img\\39ce59a8-bf1b-43fa-91ec-a90250b1139b.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ersen\\Desktop\\PiDataEmlak\\Emlak.Api\\Emlak.Api\\wwwroot\\img\\520231e2-3614-4b56-bef9-f76663137e86.jpg",
+      "PackagePath": "staticwebassets\\img\\520231e2-3614-4b56-bef9-f76663137e86.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ersen\\Desktop\\PiDataEmlak\\Emlak.Api\\Emlak.Api\\wwwroot\\img\\a30ecb95-e252-44b2-af43-1f24cd0dd6ad.jpg",
+      "PackagePath": "staticwebassets\\img\\a30ecb95-e252-44b2-af43-1f24cd0dd6ad.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ersen\\Desktop\\PiDataEmlak\\Emlak.Api\\Emlak.Api\\wwwroot\\img\\b45bd636-48ad-4baf-93f4-ea6764ba88f6.jpg",
+      "PackagePath": "staticwebassets\\img\\b45bd636-48ad-4baf-93f4-ea6764ba88f6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ersen\\Desktop\\PiDataEmlak\\Emlak.Api\\Emlak.Api\\wwwroot\\img\\c746089d-f221-4293-9c02-60043e6becd2.jpg",
+      "PackagePath": "staticwebassets\\img\\c746089d-f221-4293-9c02-60043e6becd2.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.Emlak.Api.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.Emlak.Api.props",
+      "PackagePath": "build\\Emlak.Api.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.Emlak.Api.props",
+      "PackagePath": "buildMultiTargeting\\Emlak.Api.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.Emlak.Api.props",
+      "PackagePath": "buildTransitive\\Emlak.Api.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
